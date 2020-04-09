@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         mainImage.animationRepeatCount = 0
         mainImage.image = UIImage(named: "one")
 
-        mainButton.setTitle("Start!", for: UIControlState())
+        mainButton.setTitle("Start!", for: UIControl.State())
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,7 +46,7 @@ class ViewController: UIViewController {
             // アニメーションを停止
             let random = arc4random_uniform(6)
             let diceValue = random + 1
-            mainButton.setTitle("Start!", for: UIControlState())
+            mainButton.setTitle("Start!", for: UIControl.State())
             mainImage.stopAnimating()
             switch diceValue {
             case 1:
@@ -67,7 +67,7 @@ class ViewController: UIViewController {
             isAnimationExec = false
         } else {
             // アニメーションを開始
-            mainButton.setTitle("Stop!", for: UIControlState())
+            mainButton.setTitle("Stop!", for: UIControl.State())
             mainImage.startAnimating()
             isAnimationExec = true
         }
